@@ -83,7 +83,7 @@ int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, const char **ar
     if (strcasecmp(user_response, answers[selected_question_index]) == 0) {
         pam_syslog(pamh, LOG_INFO, "Pergunta 2FA respondida corretamente para o usuário: %s", username);
         retval = PAM_SUCCESS; // Autenticacao bem-sucedida.
-        pam_info(pamh, "Autenticação 2FA bem-sucedida. Bem-vindo(a)!");
+        pam_info(pamh, "Autenticacao 2FA bem-sucedida. Bem-vindo(a)!");
     } else {
         // Registra um aviso se a resposta estiver incorreta.
         pam_syslog(pamh, LOG_WARNING, "Resposta 2FA incorreta para o usuário: %s. Esperado '%s', obtido '%s'", 
